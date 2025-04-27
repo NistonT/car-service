@@ -15,7 +15,10 @@ export class UserService {
         password: await hash(dto.password),
         phone: dto.phone,
         login: dto.login,
-        id_role: 0,
+        id_role: 1,
+      },
+      include: {
+        role: true,
       },
     });
   }
